@@ -31,7 +31,7 @@ end
 def get_japanese_emoticon(path, emoticon)
   check_emoticon = load_library(path)
   japanese_emoticon = nil 
-  sorry_message = "Sorry, that emoticon was not found"
+  message = "Sorry, that emoticon was not found"
   check_emoticon.each do |meaning, emoticon_language|
     emoticon_language.each do |language, face|
       if emoticon == face
@@ -40,7 +40,7 @@ def get_japanese_emoticon(path, emoticon)
     end 
   end
     if japanese_emoticon == nil
-      japanese_emoticon = sorry_message
+      japanese_emoticon = message
     end
   japanese_emoticon
 end 
