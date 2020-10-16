@@ -13,7 +13,7 @@ end
 
 def get_english_meaning(file, emoticon)
   library_check = load_library(file)
-  english_meaning = nil
+
  
 end 
 
