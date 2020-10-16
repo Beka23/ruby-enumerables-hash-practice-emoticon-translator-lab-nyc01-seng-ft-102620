@@ -14,7 +14,7 @@ end
 def get_english_meaning(path, emoticon)
   library_check = load_library(path)
   english_meaning = nil
-  sorry_message = "Sorry, that emoticon was not found"
+  message = "Sorry, that emoticon was not found"
   library_check.each do |meaning, emoticon_language|
     emoticon_language.each do |language, face|
       if emoticon == face 
@@ -23,7 +23,7 @@ def get_english_meaning(path, emoticon)
     end
   end
     if english_meaning == nil
-        english_meaning = sorry_message
+        english_meaning = message
     end
   english_meaning
 end 
