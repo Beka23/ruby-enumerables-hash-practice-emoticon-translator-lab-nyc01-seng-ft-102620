@@ -1,7 +1,7 @@
 require "yaml"
 
-def load_library(data)
-  emoticons = YAML.load_file(data)
+def load_library(path)
+  emoticons = YAML.load_file(path)
   emoticon_language = {}
   emoticons.each do |key, value|
     emoticon_language[key] ={}
