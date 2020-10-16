@@ -27,3 +27,20 @@ def get_english_meaning(file, emoticon)
     end
   english_meaning
 end 
+
+def get_japanese_emoticon(file, emoticon)
+  check_emoticon = load_library(file)
+  japanese_emoticon = nil 
+  sorry_message = "Sorry, that emoticon was not found"
+  check_emoticon.each do |meaning, emoticon_language|
+    emoticon_language.each do |language, face|
+      if emoticon == face
+        japanese_emoticon = emoticon_language[:japanese]
+      end
+    end 
+  end
+    if japanese_emoticon == nil
+      japanese_emoticon = sorry_message
+    end
+  japanese_emoticon
+end 
